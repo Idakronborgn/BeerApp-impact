@@ -1,25 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { FaBars, FaTimes, FaPhoneAlt, FaLocationArrow, FaShoppingBasket } from 'react-icons/fa';
 
 function Navbar() {
-    const navRef = useRef(null);
-
-    const showNavBar = () => {
-        if (navRef.current) {
-            navRef.current.classList.toggle("responsiveNav");
-        }
-    }
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     return (
         <header>
             <img src='/cheers.png' className='logo' width="80"></img>
-            <nav ref={navRef}>
+            <nav className={isMenuOpen ? "responsiveNav" : ""}>
                 <a href='/#'>Catalog</a>
                 <a href='/#'>Beer</a>
                 <a href='/#'>Bar</a>
                 <a href='/#'>About us</a>
                 <a href='/#'>Contact</a>
-                <button className='nav-btn nav-close-btn' onClick={showNavBar}>
+                <button className='nav-btn nav-close-btn' onClick={() => setIsMenuOpen(false)}>
                     <FaTimes />
                 </button>
             </nav>
@@ -28,7 +22,7 @@ function Navbar() {
             <a href='/#'><FaLocationArrow className='faInfoIcons'/> Moscow Yakimanika, 2</a>
             <a href='/#'><FaPhoneAlt className='faInfoIcons'/> +45 22 22 22 22</a>
             </div>
-            <button className='nav-btn' onClick={showNavBar}>
+            <button className='nav-btn' onClick={() => setIsMenuOpen(true)}>
                 <FaBars />
             </button>
         </header>
