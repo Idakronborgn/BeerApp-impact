@@ -102,8 +102,26 @@ a {
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  
 }
+
+.beer-product {
+  padding: 10px;
+  background-color: aliceblue;
+  height: 350px;
+}
+
+.beer-product:hover {
+background-color: var(--beerColorYellow);
+transition: .3;
+}
+
+.beer-product img {
+  height: 250px;
+  background-size: cover;
+}
+
 
 .grid-container {
   display: grid;
