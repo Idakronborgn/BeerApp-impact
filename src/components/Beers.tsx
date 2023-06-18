@@ -5,6 +5,7 @@ import Link from "next/link";
 
 
 
+
 export type BeerType = {
     BeerType: Key | null | undefined;
     id: number;
@@ -33,6 +34,7 @@ function Beers() {
     return (
 
     <section className="beer-section">
+    
     <ul className="grid-container">
         {beers?.map(beer => (
         <li>

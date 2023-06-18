@@ -8,7 +8,7 @@ function BeerDetailPage() {
   const { id } = router.query; // Henter øllens ID fra URL'en
 
   // Find øllen baseret på ID i øllisten
-  const beer = beers.find((beer: BeerType) => beer.id );
+  const beer = beers.find((beer: BeerType) => beer.id === null );
 
   if (!beer) {
     return <div>Øl ikke fundet</div>;
