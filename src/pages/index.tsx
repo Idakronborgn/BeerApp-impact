@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import Beers from '@/components/Beers';
+import Beers, { BeerType } from '@/components/Beers';
 import Navbar from '@/components/Navbar';
 import React from 'react'; 
-import Link from 'next/link'; // Brug Link fra Next.js i stedet for React Router's Link
+import Link from 'next/link'; 
 
 
 const inter = Inter({ subsets: ['latin'] });
 
 
 
-export default function Home() {
+export default function Home(beer: BeerType) {
   return (
     <>
       <Head>
@@ -24,14 +24,7 @@ export default function Home() {
           <Navbar />
         </React.Fragment>
         <div>
-          {/* Opret et link til beersiden med ølens ID */}
-          <Link href="/[id]" as={`/beerDetailPage/`} >
-          <Beers />
-          </Link>
-
-          {/* <Link href="/[id]" as={`/beerDetailPage/${beer.id}`} key={beer.id}>
-              <a>{beer.name}</a>
-            </Link> */}
+            <Beers />
           
         </div>
       </main>

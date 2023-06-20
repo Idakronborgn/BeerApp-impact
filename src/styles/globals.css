@@ -61,7 +61,13 @@ header .nav-btn {
 
 .faInfoIcons {
   color: var(--beerColorYellow);
-  width: 25px;
+  font-size: 17px;
+}
+
+.hiArrowIcon{
+  color: var(--beerColorYellow);
+  font-size: 14px;
+  
 }
 
 .logo {
@@ -103,7 +109,26 @@ a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; 
-  
+}
+
+.link-section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.default-p-text {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+.catelog {
+  margin: 0 1rem;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--beerColorYellow);
 }
 
 .beer-product {

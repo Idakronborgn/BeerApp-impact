@@ -2,8 +2,7 @@ import React, { Key } from "react";
 import { useEffect, useState } from 'react'
 import Beer from "./Beer";
 import Link from "next/link";
-
-
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
 export type BeerType = {
@@ -12,10 +11,13 @@ export type BeerType = {
     name: string;
     image_url: string;
     tagline: string;
+    to: string;
+    first_brewed: string;
+    ph: number;
+    description: string;
   }
 
 
-  
 function Beers() {
     const [beers, setBeers] = useState<BeerType[]>([]);
     
@@ -28,13 +30,17 @@ function Beers() {
           console.log(json);
           
       });  
+      
   
     },[])
     
     return (
 
     <section className="beer-section">
-    
+      <div className="link-section">
+    <p className="default-p-text">All beers</p>
+    <Link href="/" className="catelog">To the catelog <FaLongArrowAltRight className='hiArrowIcon'/></Link>
+    </div>
     <ul className="grid-container">
         {beers?.map(beer => (
         <li>
