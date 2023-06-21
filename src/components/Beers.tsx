@@ -42,7 +42,7 @@ function Beers() {
     <Link href="/" className="catelog">To the catelog <FaLongArrowAltRight className='hiArrowIcon'/></Link>
     </div>
     <ul className="grid-container">
-        {beers?.map(beer => (
+        {beers?.slice(0,4).map(beer => (
         <li>
         <Beer {...beer} />
         </li>

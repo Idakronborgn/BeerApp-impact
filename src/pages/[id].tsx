@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 
 export const getStaticPaths = async () => {
-  const res = await fetch('https://api.punkapi.com/v2/beers/1');
+  const res = await fetch('https://api.punkapi.com/v2/beers/');
   const data = await res.json();
 
   const paths = data.map((beer: { id: { toString: () => any; }; }) => {

@@ -25,7 +25,6 @@ export default function Home(beer: BeerType) {
         </React.Fragment>
         <div>
             <Beers />
-          
         </div>
       </main>
     </>
